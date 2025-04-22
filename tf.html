@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bukti Transfer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+    }
+    .bukti-transfer {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      height: 60px;
+    }
+    .ref {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+    td {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
+    .value {
+      text-align: right;
+      color: #000;
+    }
+    .qr {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .qr img {
+      width: 120px;
+      height: auto;
+    }
+    .footer {
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+      margin-top: 25px;
+    }
+    .print-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .print-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="bukti-transfer">
+    <div class="header">
+      <img src="logo-bca.png" alt="Logo BCA">
+      <h2>Bukti Transfer</h2>
+    </div>
+    <div class="ref">
+      No. Referensi: <strong>TRX-BCA-20250422-0012345</strong>
+    </div>
+
+    <table>
+      <tr>
+        <td class="label">Tanggal</td>
+        <td class="value">22 April 2025</td>
+      </tr>
+      <tr>
+        <td class="label">Waktu</td>
+        <td class="value">19:13:10</td>
+      </tr>
+      <tr>
+        <td class="label">Dari Rekening</td>
+        <td class="value">7635901753 (BCA)</td>
+      </tr>
+      <tr>
+        <td class="label">Atas Nama</td>
+        <td class="value">DIVO JEANNY MARVELLO</td>
+      </tr>
+      <tr>
+        <td class="label">Tujuan Rekening</td>
+        <td class="value">0776358284 (Mandiri)</td>
+      </tr>
+      <tr>
+        <td class="label">Nama Penerima</td>
+        <td class="value">DAVID ANDREAS</td>
+      </tr>
+      <tr>
+        <td class="label">Jumlah Transfer</td>
+        <td class="value">Rp1.500.000,00</td>
+      </tr>
+      <tr>
+        <td class="label">Berita</td>
+        <td class="value">-</td>
+      </tr>
+      <tr>
+        <td class="label">Status</td>
+        <td class="value" style="color: green;"><strong>Berhasil</strong></td>
+      </tr>
+    </table>
+
+    <div class="qr">
+      <img src="qr-code.png" alt="QR Code">
+    </div>
+
+    <div class="footer">
+      Bukti transfer ini sah dan telah diproses oleh sistem.<br>
+      Harap simpan sebagai referensi transaksi Anda.
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Cetak</button>
+  </div>
+</body>
+</html>
