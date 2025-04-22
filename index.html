@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Bukti Transfer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link ke CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div class="container" id="loginContainer">
+    <h2>Masukkan Password</h2>
+    <div class="error" id="errorMsg">Password salah!</div>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <button id="loginBtn">Masuk</button>
+  </div>
+
+  <!-- Form Input Transfer -->
+  <div class="container" id="formInput" style="display:none;">
+    <h2>Form Pengaturan Transfer</h2>
+    <input type="text" id="namaPengirim" placeholder="Nama Pengirim">
+    <input type="text" id="rekeningPengirim" placeholder="No. Rekening Pengirim">
+    <input type="text" id="namaPenerima" placeholder="Nama Penerima">
+    <input type="text" id="rekeningPenerima" placeholder="No. Rekening Penerima">
+    <input type="text" id="bankTujuan" placeholder="Bank Tujuan">
+    <input type="number" id="jumlah" placeholder="Jumlah Transfer (contoh: 1500000)">
+    <input type="text" id="berita" placeholder="Berita Transfer">
+    <button id="previewBtn">Lihat Bukti Transfer</button>
+  </div>
+
+  <!-- Output Bukti Transfer -->
+  <div class="container" id="buktiTransfer" style="display:none;">
+    <div class="header">
+      <img src="logo-bca.png" alt="Logo BCA">
+      <h2>Bukti Transfer</h2>
+      <p>No. Referensi: <strong id="refID"></strong></p>
+    </div>
+    <table>
+      <tr><td class="label">Tanggal</td><td class="value" id="tanggal"></td></tr>
+      <tr><td class="label">Waktu</td><td class="value" id="waktu"></td></tr>
+      <tr><td class="label">Dari Rekening</td><td class="value" id="dariRek"></td></tr>
+      <tr><td class="label">Nama Pengirim</td><td class="value" id="dariNama"></td></tr>
+      <tr><td class="label">Tujuan Rekening</td><td class="value" id="keRek"></td></tr>
+      <tr><td class="label">Nama Penerima</td><td class="value" id="keNama"></td></tr>
+      <tr><td class="label">Bank Tujuan</td><td class="value" id="bankTujuanOut"></td></tr>
+      <tr><td class="label">Jumlah</td><td class="value" id="jumlahOut"></td></tr>
+      <tr><td class="label">Berita</td><td class="value" id="beritaOut"></td></tr>
+      <tr><td class="label">Status</td><td class="value status">Berhasil</td></tr>
+    </table>
+    <div class="qr">
+      <img src="qr-code.png" alt="QR Code">
+    </div>
+    <div class="footer">
+      Bukti transfer ini sah dan telah diproses oleh sistem.<br>
+      Harap simpan sebagai referensi transaksi Anda.
+    </div>
+    <button onclick="window.print()">Cetak</button>
+  </div>
+
+  <!-- link ke JS -->
+  <script src="script.js"></script>
+</body>
+</html>
